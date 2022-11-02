@@ -1,0 +1,373 @@
+/* clamp() calculator src: "https://min-max-calculator.9elements.com/" */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+  color: #7b8bad;
+  width: 100vw;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  color: #162542;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+header {
+  text-align: start;
+  overflow-x: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  /* padding: 24px - 40px; */
+  padding: clamp(1.5rem, -0.167rem + 7.11vw, 2.5rem);
+}
+
+.head > img {
+  width: 40px;
+  height: 40px;
+}
+
+.button {
+  background-color: #e8eff2;
+  color: #162542;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 11px 14px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: #162542;
+  color: white;
+}
+
+.header-text {
+  /* padding: 24px - 40px; */
+  padding: clamp(1.5rem, -0.167rem + 7.11vw, 2.5rem);
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+header p {
+  margin: 32px 0;
+}
+
+.button-release-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.button-release-container > .button {
+  background-color: #f16718;
+  color: white;
+}
+
+.button-release-container > .button:hover {
+  background-color: #ff9b62;
+}
+
+.keyboard-image {
+  background-image: url('./assets/mobile/image-keyboard.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  /* height: min 325px - max 420px; */
+  height: clamp(20.313rem, 10.417rem + 42.22vw, 26.25rem);
+  border-radius: 20px;
+  /* margin-left: 24px - 40px; */
+  margin-left: clamp(1.5rem, -0.167rem + 7.11vw, 2.5rem);
+  margin-bottom: 22px;
+}
+
+.square-image {
+  display: none;
+}
+
+main {
+  width: 100%;
+  margin-bottom: 47px;
+}
+
+.phone-glass-keyboard {
+  display: flex;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.phone-keyboard {
+  background-image: url(./assets/mobile/image-phone-and-keyboard.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f15800;
+  background-blend-mode: multiply;
+  opacity: 0.8;
+  width: 25%;
+  /* height: 193px - 320px; */
+  height: clamp(12.063rem, -1.167rem + 56.44vw, 20rem);
+  border-radius: 20px;
+  margin-left: -20px;
+  margin-right: 25px;
+}
+
+.glass-keyboard {
+  background-image: url(./assets/mobile/image-glass-and-keyboard.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 70%;
+  /* height: 193px - 320px; */
+  height: clamp(12.063rem, -1.167rem + 56.44vw, 20rem);
+  border-radius: 20px;
+}
+
+.main-text {
+  /* padding: 0 (24px - 40px); */
+  padding: 0 clamp(1.5rem, -0.167rem + 7.11vw, 2.5rem);
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin: 0 36px 24px 36px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  /* padding: 0 (24px - 40px); */
+  padding: 0 clamp(1.5rem, -0.167rem + 7.11vw, 2.5rem);
+}
+
+.icon {
+  background-color: #f16718;
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+  padding: 0 70px;
+  margin: 40px 0 24px 0;
+}
+
+footer {
+  /* padding: 25px - 80px; */
+  padding: clamp(1.563rem, 0.352rem + 5.16vw, 5rem);
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    width: 90vw;
+    text-align: left;
+  }
+
+  .head {
+    margin-bottom: 60px;
+    /* padding: 40px - 100px; */
+    padding: clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem);
+  }
+
+  .button {
+    padding: 16px 26px;
+  }
+
+  .header-container {
+    display: flex;
+  }
+
+  .header-text {
+    /* padding: 40px - 100px; */
+    padding: clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem);
+  }
+
+  h1 {
+    /* font-size: 48px - 56px;
+    line-height: 48 - 56px; */
+    font-size: clamp(3rem, 2.643rem + 0.95vw, 3.5rem);
+    line-height: clamp(3rem, 2.643rem + 0.95vw, 3.5rem);
+  }
+
+  .keyboard-image {
+    background-image: url('./assets/tablet/image-keyboard.jpg');
+    /* height: 400px - 500px; */
+    height: clamp(25rem, 16.156rem + 23.58vw, 31.25rem);
+    margin-left: 0;
+    /* margin-bottom: 22px - 40px; */
+    margin-bottom: clamp(1.375rem, -0.217rem + 4.25vw, 2.5rem);
+    margin-right: -20px;
+  }
+
+  .phone-glass-keyboard {
+    /* padding: 0 (40px - 100px); */
+    padding: 0 clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem);
+  }
+
+  .phone-keyboard {
+    background-image: url(./assets/tablet/image-phone-and-keyboard.jpg);
+    /* height: 320px - 440px; */
+    height: clamp(20rem, 9.387rem + 28.3vw, 27.5rem);
+    margin-left: 0;
+    margin-right: 30px;
+  }
+
+  .glass-keyboard {
+    background-image: url(./assets/tablet/image-glass-and-keyboard.jpg);
+    /* height: 320px - 440px; */
+    height: clamp(20rem, 9.387rem + 28.3vw, 27.5rem);
+  }
+
+  .main-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 (40px - 100px); */
+    padding: 0 clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem) 0
+      clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem);
+  }
+
+  h2 {
+    margin: 0 36px 0 0;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /* padding: 0 (40px - 100px); */
+    padding: 0 clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem);
+  }
+
+  article {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0;
+  }
+
+  h3 {
+    padding: 0 70px 0 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 85vw;
+  }
+
+  .head {
+    margin-bottom: 100px;
+  }
+
+  header p {
+    font-size: 18px;
+  }
+
+  .keyboard-image {
+    background-image: url('./assets/desktop/image-keyboard.jpg');
+    height: 500px;
+    margin-left: 0;
+    margin-right: 22px;
+  }
+
+  .square-image {
+    background-image: url('./assets/shared/pattern-square.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+  }
+
+  main {
+    display: flex;
+    margin-bottom: 47px;
+    padding-right: clamp(2.5rem, -0.179rem + 7.14vw, 6.25rem);
+    overflow-x: hidden;
+  }
+
+  main > .square-image {
+    position: relative;
+    top: 230px;
+    background-position: -76px;
+    /* margin-left: (-120 -90px); */
+    margin-left: clamp(-7.5rem, -12.115rem + 7.21vw, -5.625rem);
+    margin-right: 25px;
+  }
+
+  .phone-glass-keyboard {
+    flex-basis: 65%;
+    padding: 0;
+  }
+
+  .phone-keyboard {
+    background-image: url(./assets/desktop/image-phone-and-keyboard.jpg);
+    background-size: 300px 480px;
+    width: 35%;
+    height: 480px;
+  }
+
+  .glass-keyboard {
+    background-image: url(./assets/desktop/image-glass-and-keyboard.jpg);
+    background-size: 600px 480px;
+    width: 65%;
+    height: 480px;
+  }
+
+  .main-text {
+    flex-basis: 25%;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 40px;
+  }
+
+  .main-text > p {
+    margin-top: 30px;
+  }
+
+  section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  h3 {
+    padding: 0 20px 0 0;
+  }
+}
